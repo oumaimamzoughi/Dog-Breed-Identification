@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+    <title>Dog Recognition</title>
+</head>
+<body>
+
+<header class="header">
+    <a href="#" class="logo">
+        <i class="fas fa-paw"> </i> My Dog
+    </a>
+    <nav class="navbar">
+        <a href="#home"> home</a>
+        <a href="#about"> about</a>
+        <a href="#test"> test</a>
+        <a href="#Breeds"> Breeds</a>
+    </nav>
+    
+
+</header>
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Discover the pawfect Breed ! <br>
+            Unleash Your Dog's Identity now . </h3>
+    </div>
+</section>
+
+
+<section class="test" id="test" style="background-color: #bbb5ff;">
+    <h3 class="heading" style="color: #000;"> Unreveal the breed </h3>
+    <div class="upload-area">
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button type="submit" >upload</button>
+        </form>
+      {% if file_name %}
+      <img src="{{ url_for('static', filename='uploads/' + file_name) }}" alt="Uploaded Image">
+    {% endif %}
+    </div>
+    <h6 style="font-size:30px;">Your Dog Breed is : {{name}}</h6>
+        <h6 style="font-size:30px;">Probability of prediction %: {{pre}}</h6>
+
+
+</section>
+
+
+<script src="../static/script/script.js"></script>
+</body>
+</html>

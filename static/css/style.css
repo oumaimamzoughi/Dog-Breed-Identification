@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100,300,400,500,700&display=swap');
+
+:root {
+    --main: #ff6e01;
+    --bg: #f1e1d2;
+    --black: #000;
+    --white: #fff;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.6%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main);
+    border-radius: 5rem;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .logo i {
+    color: var(--main);
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+    color: var(--main);
+}
+
+section {
+    padding: 8rem 4%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--main);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    padding: 1.2rem;
+}
+
+.btn {
+    font-size: 1.8rem;
+    display: inline-block;
+    background: var(--main);
+    color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+    padding: 0.9rem 3rem;
+    margin-top: 1rem;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: #ff9748;
+    z-index: -1;
+    transition: .3s linear;
+    left: 0;
+
+}
+
+.btn:hover::before {
+    width: 110%;
+}
+
+.home .content .btn {
+    text-align: center;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../images/dog.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+
+}
+
+.home .content {
+    max-width: 60rem;
+
+}
+
+.home .content h3 {
+    color: var(--white);
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-top: 35%;
+}
+
+.section .about {
+    margin-top: 40px;
+}
+
+.about .box-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about .deco-title {
+    font-size: 10rem;
+    font-weight: 350;
+    white-space: nowrap;
+    line-height: 0.5;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgb(204, 204, 204);
+    transform-origin: top left;
+    transform: rotate(0.25turn);
+    position: absolute;
+    top: 110%;
+    left: 40%;
+    z-index: -1;
+}
+
+.about .box-container .image {
+    flex: 1 1 31rem;
+}
+
+.about .box-container .image .img {
+    width: 200px;
+    height: 200px;
+}
+
+.about.content {
+    flex: 1 1 41rem;
+}
+
+.about .content .title {
+    font-size: 2rem;
+    color: var(--black);
+
+}
+
+.about .content p {
+    font-size: 1.7rem;
+    color: #444;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+
+
+.Breeds .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.Breeds .box-container .box {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.Breeds .box-container .box .img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Breeds .box-container .box:hover img {
+    transform: scale(1.1);
+}
+
+.Breeds .box-container .box .content {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+.Breeds .box-container .box:is(:hover, :focus-within) .content {
+    transform: translate(-20px);
+}
+
+.Breeds .box-container .box:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: var(--black);
+    transition: 0.5s ease;
+}
+
+.Breeds .box-container .box .content h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.upload-area {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#drop-area {
+    background-color: #ffffff;
+    border: 2px #bbb5ff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#img-view {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px dashed #bbb5ff;
+    background: #f7f8ff;
+    background-position: center;
+    background-size: cover;
+    
+
+}
+
+#img-view img {
+    width: 100 px;
+
+}
+
+#img-view span {
+    display: block;
+    font-size: 15px;
+    color: #777;
+
+}
+
+.gallery{
+    background: var(--bg);
+}
+
+.gallery .slide .image{
+height: 30rem;
+overflow: hidden;
+position: relative;
+}
+
+.gallery .slide .image img {
+    height: 100%;
+    width: 100;
+    object-fit: cover;
+}
+
+
+#uploadButton {
+    position: relative;
+    top: 25%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #ff6e01;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 2;
+}
+
