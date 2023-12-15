@@ -70,9 +70,10 @@ I was pleasantly surprised by the exceptional performance of the algorithm, whic
 
 Using the final model, some examples of predictions are shown below. 
 
-![image](https://github.com/oumaimamzoughi/Dog-Breed-Identification/assets/153776526/f42b81ba-b28c-4a37-8d7c-b36b9ac8da23)
-the prediction is:
-![image](https://github.com/oumaimamzoughi/Dog-Breed-Identification/assets/153776526/68689504-59ed-4ea1-9485-ce4dc0f5313c)
+![image](https://github.com/oumaimamzoughi/Dog-Breed-Identification/assets/153776526/59394d3e-863a-480d-9012-55535d20350f)
+
+#### the prediction is:
+![image](https://github.com/oumaimamzoughi/Dog-Breed-Identification/assets/153776526/1d8d1374-6d4e-4179-8a60-ef34cb256cb1)
 
 
 
